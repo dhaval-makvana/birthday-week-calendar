@@ -101,16 +101,22 @@ function createBirthdayDivs(names) {
 	var birthdayDiv = document.createElement("div");
 	birthdayDiv.classList.add("day-content");
 
-	var width = Math.ceil(Math.sqrt(names.length));
+    var widthMaker = Math.ceil(Math.sqrt(names.length));
+    
+    console.log("width", widthMaker);
+    console.log("actual width", 100/ widthMaker);
+    var width = 100/ widthMaker;
+    width = width.toFixed(2);
 
 	for (let i = 0; i < names.length; i++) {
 		const randomColor = Math.floor(Math.random() * 9);
 		var initialDiv = document.createElement("div");
 		const colorClass = `color-${randomColor}`;
 
-		initialDiv.classList.add(colorClass);
-		initialDiv.style.width = `${100 / width} %`;
-		initialDiv.style.height = `${100 / width} %`;
+        initialDiv.classList.add(colorClass);
+        initialDiv.classList.add('initial-div');
+        initialDiv.style.width = `${width}%`;
+		initialDiv.style.height = `${width}%`;
 		initialDiv.innerText = names[i].name;
 		birthdayDiv.appendChild(initialDiv);
 	}

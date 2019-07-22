@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+/* html {
+	font-size: 85%;
+} */
+
 .app {
     text-align: center;
 	background-color: antiquewhite;
@@ -62,6 +66,16 @@
 	justify-content: flex-start;
 	/* align-content: flex-start; */
 	align-items: flex-start;
+	/* border: 2px solid brown; */
+}
+
+.initial-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: white;
+	letter-spacing: .5rem;
 }
 
 .day-empty {
