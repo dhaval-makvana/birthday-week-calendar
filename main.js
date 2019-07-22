@@ -129,6 +129,13 @@ function createDatadiv() {
     dataDiv.classList.add("data-div");
     dataDiv.id = '3-data-div';
 
+    var textAreaDiv = document.createElement('div');
+    textAreaDiv.classList.add('textarea-div');
+
+    var noteh6 = document.createElement('h6');
+    noteh6.classList.add('h6');
+    noteh6.innerHTML = "Please type/put valid JSON in the field given below.<br/> Else the calendar won't display the birthdays correctly."
+
 	var textArea = document.createElement("textarea");
 	textArea.classList.add("textarea");
 	textArea.addEventListener("change", function(event) {
@@ -279,13 +286,16 @@ function createDatadiv() {
 		
 	});
 
-	// console.log(button);
+    // console.log(button);
+    
+    textAreaDiv.appendChild(noteh6);
+    textAreaDiv.appendChild(textArea);
 
 	filterDiv.appendChild(h6);
 	filterDiv.appendChild(yearInput);
 	filterDiv.appendChild(button);
 
-	dataDiv.appendChild(textArea);
+	dataDiv.appendChild(textAreaDiv);
 	dataDiv.appendChild(filterDiv);
 
 	return dataDiv;

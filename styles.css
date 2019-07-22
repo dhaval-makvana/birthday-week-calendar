@@ -92,12 +92,16 @@
 	padding: 2rem;
 }
 
-.textarea {
+.textarea-div {
 	flex-grow: 3;
+}
+
+.textarea {
+	width: 100%;
 	overflow: auto;
 	border: 2px solid transparent;
 	border-radius: 5px;
-	height: 20rem;
+	height: 18rem;
 }
 
 .textarea:focus {
