@@ -67,7 +67,7 @@
 .day-empty {
     height: inherit;
     width: inherit;
-    background-color: #f9f9f9;
+    background-color: #eee;
     background-image: url(./icon.svg);
     background-size: 12rem 12rem;
 }

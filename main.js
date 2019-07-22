@@ -36,7 +36,7 @@ function createWebApp(listState) {
 	rootDiv.classList.add("app");
 
 	var h1 = document.createElement("h1");
-	h1.innerHTML = "Work Area";
+	h1.innerHTML = "Birthday Calendar";
     h1.classList.add("h1");
     h1.id = '1-h1';
 
@@ -162,15 +162,23 @@ function createDatadiv() {
 
 		let filteredArray = textarea.filter(d => {
 			let birthday = d.birthday.split("/");
-			let birthdayYear = birthday[2];
+            let birthdayYear = birthday[2];
+            let date = new Date(birthday[2], birthday[0] - 1, birthday[1])
 			if (Number(birthdayYear) === Number(year)) {
 				// console.log("b", birthdayYear);
 				// console.log("y", year);
-				return d;
+				return {
+                    ...d,
+                    date
+                };
 			}
 		});
 
-		// console.log(filteredArray);
+        console.log(filteredArray);
+        filteredArray.sort((a, b) => {
+            return b.date - a.date
+        })
+        console.log(filteredArray);
 
 		filteredArray = filteredArray.map(d => {
 			let tempObject = {};
