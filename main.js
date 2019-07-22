@@ -134,7 +134,9 @@ function createDatadiv() {
 
     var noteh6 = document.createElement('h6');
     noteh6.classList.add('h6');
-    noteh6.innerHTML = "Please type/put valid JSON in the field given below.<br/> Else the calendar won't display the birthdays correctly."
+	noteh6.innerText = `Please type/put valid JSON in the field given below.
+	Else the calendar won't display the birthdays correctly.
+	Date Format: 'MM/DD/YYYY'`
 
 	var textArea = document.createElement("textarea");
 	textArea.classList.add("textarea");
